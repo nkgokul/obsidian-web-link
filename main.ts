@@ -12,6 +12,7 @@ export default class WebLink extends Plugin {
 				const modal = new Modal(this.app);
 				let link = `https://gokulnk.com/notes/${activeFile.path}`;
 				link = link.replace(/\s+/g, '-')
+				link = link.replace(/.md/g, '')
 				const content = `<a target="_blank" href="${link}" class="external-link">${link}</a> `;
 				window.open(link, '_blank');
 			  } else {
